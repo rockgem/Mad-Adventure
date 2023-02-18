@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Mad Adventure"
 run/main_scene="res://scenes/World.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/sprites/player/Chara - BlueIdle00003.png"
 
 [display]
 
