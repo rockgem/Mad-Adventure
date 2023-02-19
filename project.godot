@@ -16,8 +16,8 @@ config/icon="res://assets/sprites/player/Chara - BlueIdle00003.png"
 
 [display]
 
-window/size/width=380
-window/size/height=180
+window/size/width=456
+window/size/height=216
 window/size/test_width=1140
 window/size/test_height=540
 window/dpi/allow_hidpi=true
