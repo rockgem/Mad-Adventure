@@ -1,8 +1,43 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/UI.gd" type="Script" id=1]
+[ext_resource path="res://resources/styles/panel_1.tres" type="StyleBox" id=2]
+[ext_resource path="res://resources/styles/small_panel_blue.tres" type="StyleBox" id=3]
+[ext_resource path="res://resources/styles/small_panel_brown.tres" type="StyleBox" id=4]
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 3.0
+margin_right = -3.0
+margin_bottom = -4.0
+custom_styles/tab_fg = ExtResource( 3 )
+custom_styles/tab_disabled = ExtResource( 4 )
+custom_styles/tab_bg = ExtResource( 4 )
+custom_styles/panel = ExtResource( 2 )
+tab_align = 0
+
+[node name="Bag" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 35.0
+margin_right = -17.0
+margin_bottom = -14.0
+tab_align = 0
+
+[node name="Stats" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 41.0
+margin_right = -17.0
+margin_bottom = -14.0
+tab_align = 0
