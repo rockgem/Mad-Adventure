@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 
 var vel = Vector2.ZERO
-var move_speed = 100.0
+var move_speed = 200.0
 var gravity = 900.0
 var dir = 1
 
