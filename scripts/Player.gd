@@ -7,6 +7,11 @@ var move_speed = 200.0
 var gravity = 900.0
 var dir = 1
 
+var objs_nearby = [] # array of area2Ds or bodies
+
+
+func _ready():
+	ManagerGame.player_global_ref = self
 
 
 func _physics_process(delta):
@@ -39,3 +44,13 @@ func _physics_process(delta):
 	
 	
 	vel = move_and_slide(Vector2(vel.x * move_speed, vel.y), Vector2.UP)
+
+
+func _on_ObjDetection_area_entered(area):
+	objs_nearby.append(area)
+	print_debug(objs_nearby)
+
+
+func _on_ObjDetection_area_exited(area):
+	objs_nearby.erase(area)
+	print_debug(objs_nearby)

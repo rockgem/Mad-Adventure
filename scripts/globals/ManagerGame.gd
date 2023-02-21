@@ -17,6 +17,8 @@ var player_data: Dictionary = {
 	'inv_items': []
 }
 
+var player_global_ref = null
+
 
 func _ready():
 	OS.center_window()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://assets/sprites/player/Idle-Sheet.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=2]
@@ -215,6 +215,9 @@ animations = [ {
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=41]
 
+[sub_resource type="CircleShape2D" id=50]
+radius = 30.0167
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
@@ -258,3 +261,15 @@ animation = "idle"
 tree_root = SubResource( 40 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 41 )
+
+[node name="ObjDetection" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjDetection"]
+position = Vector2( 0, -26 )
+shape = SubResource( 50 )
+
+[connection signal="area_entered" from="ObjDetection" to="." method="_on_ObjDetection_area_entered"]
+[connection signal="area_exited" from="ObjDetection" to="." method="_on_ObjDetection_area_exited"]
