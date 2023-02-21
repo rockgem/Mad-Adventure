@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://resources/cave.tres" type="TileSet" id=1]
 [ext_resource path="res://actors/entities/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/World.gd" type="Script" id=3]
+[ext_resource path="res://actors/objs/Portal.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="BackObjs" type="YSort" parent="."]
+[node name="ScriptHolder" type="Node" parent="."]
 
 [node name="YSort" type="YSort" parent="."]
 z_index = 99
@@ -22,3 +23,9 @@ tile_data = PoolIntArray( 196605, 0, 0, 196606, 0, 1, 196607, 0, 1, 131072, 0, 1
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 155, -103 )
 z_index = -1
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Portal" parent="Portals" instance=ExtResource( 4 )]
+position = Vector2( -52, 56 )
+towards = "World2"

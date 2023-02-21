@@ -8,11 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Item",
+"language": "GDScript",
+"path": "res://scripts/custom/Item.gd"
+} ]
+_global_script_class_icons={
+"Item": ""
+}
+
 [application]
 
 config/name="Mad Adventure"
 run/main_scene="res://scenes/World.tscn"
 config/icon="res://assets/sprites/player/Chara - BlueIdle00003.png"
+
+[autoload]
+
+ManagerGame="*res://scripts/globals/ManagerGame.gd"
+ManagerInventory="*res://scripts/globals/ManagerInventory.gd"
 
 [display]
 
@@ -80,6 +95,7 @@ ui_up={
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
+2d_physics/layer_3="Portal"
 
 [physics]
 
