@@ -96,6 +96,7 @@ ui_up={
 2d_physics/layer_1="World"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Portal"
+2d_physics/layer_10="NPCClickArea"
 
 [physics]
 

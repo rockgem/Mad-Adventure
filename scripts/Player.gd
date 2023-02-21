@@ -26,6 +26,8 @@ func _physics_process(delta):
 	if vel != Vector2.ZERO:
 		if is_on_floor():
 			$AnimatedSprite.play("run")
+		else:
+			$AnimatedSprite.play("falling")
 	else:
 		$AnimatedSprite.play("idle")
 	

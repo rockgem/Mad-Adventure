@@ -1,3 +1,47 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
 
-[node name="NPCBase" type="Sprite"]
+[ext_resource path="res://assets/sprites/mobs/Fly-Sheet.png" type="Texture" id=1]
+[ext_resource path="res://scripts/NPCBase.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+length = 0.333333
+loop = true
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.166667, 0.333333, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="NPCBase" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -13 )
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite")
+autoplay = "idle"
+anims/idle = SubResource( 1 )
+
+[node name="ClickArea" type="Area2D" parent="."]
+collision_layer = 513
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+position = Vector2( 0, -14 )
+shape = SubResource( 2 )
+
+[connection signal="input_event" from="ClickArea" to="." method="_on_ClickArea_input_event"]

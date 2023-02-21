@@ -1,6 +1,8 @@
 extends Node
 
 
+signal npc_clicked
+
 
 const SAVE_PATH = 'user://player_data.json'
 
@@ -28,7 +30,6 @@ func _ready():
 
 func portal_activate(world_name: String):
 	is_from_portal = true
-	portal_towards = world_name
 	get_tree().change_scene("res://scenes/%s.tscn" % world_name)
 
 
