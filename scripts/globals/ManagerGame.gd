@@ -3,6 +3,8 @@ extends Node
 
 signal npc_clicked
 
+signal dialog_activated(data)
+
 
 const SAVE_PATH = 'user://player_data.json'
 

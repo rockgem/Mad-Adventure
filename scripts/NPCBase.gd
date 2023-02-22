@@ -6,12 +6,16 @@ extends Node2D
 ########################################################################
 
 
+var speech = 'Hello'
+
 
 
 # open dialogs and shit
 func interact():
-	pass
+	if ManagerGame.player_global_ref.objs_nearby.has($ClickArea):
+		ManagerGame.emit_signal("dialog_activated", speech)
 
 
 func _on_ClickArea_input_event(viewport, event, shape_idx):
-	interact()
+	if event is InputEventScreenTouch and !event.pressed:
+		interact()
