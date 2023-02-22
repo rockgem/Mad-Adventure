@@ -2,13 +2,13 @@ tool
 extends EditorPlugin
 
 
-var main_panel_instance 
+var main_panel_instance = preload("res://addons/storytimez/scenes/StorytimezMain.tscn").instance()
 
 
 
 func _enter_tree():
-	var main_panel_instance = load("res://addons/storytimez/scenes/Main.tscn").instance()
-	get_editor_interface().get_editor_viewport().add_child(main_panel_instance)
+#	get_editor_interface().get_editor_viewport().add_child(main_panel_instance)
+	print(get_editor_interface().get_editor_viewport().get_children())
 	make_visible(false)
 
 

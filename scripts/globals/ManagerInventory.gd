@@ -2,6 +2,8 @@ extends Node
 
 
 
+#enum item_types = Item.ITEM_TYPE.duplicate()
+
 
 
 func add_item_to_bag(data: Item):

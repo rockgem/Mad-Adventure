@@ -14,3 +14,8 @@ var props: Dictionary = {
 	'name': 'Sword',
 	'type': ITEM_TYPE.CONSUMABLE
 }
+
+func init_item(id: String, name: String, type: int):
+	self.id = id
+	self.name = name
+	self.type = type
