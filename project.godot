@@ -183,7 +183,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Mad Adventure"
-run/main_scene="res://scenes/World.tscn"
+run/main_scene="res://scenes/Startup.tscn"
 config/icon="res://assets/sprites/player/Chara - BlueIdle00003.png"
 
 [autoload]
@@ -209,6 +209,7 @@ enabled=PoolStringArray( "res://addons/godot-firebase/plugin.cfg", "res://addons
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+theme/custom="res://resources/styles/theme.tres"
 
 [importer_defaults]
 
