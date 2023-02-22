@@ -2,7 +2,7 @@ extends Node2D
 
 ##### NOTE #############################################################
 # this npc node is intended to only have npc datas like dialogs and quests
-# the npcs that open shops or trigger other popups are NPCShops node
+# the npcs that open shops or trigger other popups, are NPCShops scenes
 ########################################################################
 
 
