@@ -7,7 +7,7 @@ var main_panel_instance = preload("res://addons/storytimez/scenes/StorytimezMain
 
 
 func _enter_tree():
-#	get_editor_interface().get_editor_viewport().add_child(main_panel_instance)
+	get_editor_interface().get_editor_viewport().add_child(main_panel_instance)
 	print(get_editor_interface().get_editor_viewport().get_children())
 	make_visible(false)
 
