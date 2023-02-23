@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/storytimez/scenes/tiny/ItemDisplay.gd" type="Script" id=1]
+
+[node name="ItemDisplay" type="Label"]
+margin_right = 40.0
+margin_bottom = 15.0
+mouse_filter = 0
+size_flags_horizontal = 3
+text = "Item Name"
+script = ExtResource( 1 )
+
+[connection signal="gui_input" from="." to="." method="_on_ItemDisplay_gui_input"]

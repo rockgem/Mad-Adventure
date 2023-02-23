@@ -30,7 +30,8 @@ scroll_horizontal_enabled = false
 
 [node name="List" type="HFlowContainer" parent="Panel/ScrollContainer"]
 unique_name_in_owner = true
-margin_right = 32.0
+margin_right = 164.0
+margin_bottom = 32.0
 size_flags_horizontal = 3
 
 [node name="ShopDisplay" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
@@ -38,128 +39,6 @@ size_flags_horizontal = 3
 [node name="ShopDisplay2" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
 margin_left = 36.0
 margin_right = 68.0
-
-[node name="ShopDisplay3" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 72.0
-margin_right = 104.0
-
-[node name="ShopDisplay4" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 108.0
-margin_right = 140.0
-
-[node name="ShopDisplay5" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_top = 36.0
-margin_bottom = 68.0
-
-[node name="ShopDisplay6" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 36.0
-margin_top = 36.0
-margin_right = 68.0
-margin_bottom = 68.0
-
-[node name="ShopDisplay7" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 72.0
-margin_top = 36.0
-margin_right = 104.0
-margin_bottom = 68.0
-
-[node name="ShopDisplay8" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 108.0
-margin_top = 36.0
-margin_right = 140.0
-margin_bottom = 68.0
-
-[node name="ShopDisplay9" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_top = 72.0
-margin_bottom = 104.0
-
-[node name="ShopDisplay10" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 36.0
-margin_top = 72.0
-margin_right = 68.0
-margin_bottom = 104.0
-
-[node name="ShopDisplay11" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 72.0
-margin_top = 72.0
-margin_right = 104.0
-margin_bottom = 104.0
-
-[node name="ShopDisplay12" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 108.0
-margin_top = 72.0
-margin_right = 140.0
-margin_bottom = 104.0
-
-[node name="ShopDisplay13" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_top = 108.0
-margin_bottom = 140.0
-
-[node name="ShopDisplay14" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 36.0
-margin_top = 108.0
-margin_right = 68.0
-margin_bottom = 140.0
-
-[node name="ShopDisplay15" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 72.0
-margin_top = 108.0
-margin_right = 104.0
-margin_bottom = 140.0
-
-[node name="ShopDisplay16" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 108.0
-margin_top = 108.0
-margin_right = 140.0
-margin_bottom = 140.0
-
-[node name="ShopDisplay17" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_top = 144.0
-margin_bottom = 176.0
-
-[node name="ShopDisplay18" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 36.0
-margin_top = 144.0
-margin_right = 68.0
-margin_bottom = 176.0
-
-[node name="ShopDisplay19" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 72.0
-margin_top = 144.0
-margin_right = 104.0
-margin_bottom = 176.0
-
-[node name="ShopDisplay20" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 108.0
-margin_top = 144.0
-margin_right = 140.0
-margin_bottom = 176.0
-
-[node name="ShopDisplay21" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_top = 180.0
-margin_bottom = 212.0
-
-[node name="ShopDisplay22" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 36.0
-margin_top = 180.0
-margin_right = 68.0
-margin_bottom = 212.0
-
-[node name="ShopDisplay23" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 72.0
-margin_top = 180.0
-margin_right = 104.0
-margin_bottom = 212.0
-
-[node name="ShopDisplay24" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_left = 108.0
-margin_top = 180.0
-margin_right = 140.0
-margin_bottom = 212.0
-
-[node name="ShopDisplay25" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
-margin_top = 216.0
-margin_bottom = 248.0
 
 [node name="Info" type="Panel" parent="Panel"]
 anchor_left = 1.0

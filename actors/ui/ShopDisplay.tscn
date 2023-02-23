@@ -16,3 +16,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 expand = true
 stretch_mode = 6
+
+[connection signal="gui_input" from="." to="." method="_on_ShopDisplay_gui_input"]

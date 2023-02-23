@@ -75,8 +75,8 @@ margin_right = 79.0
 margin_bottom = 24.0
 
 [node name="Character" type="Button" parent="HBoxContainer"]
-margin_right = 72.0
-margin_bottom = 20.0
+margin_right = 68.0
+margin_bottom = 21.0
 text = "Character"
 
 [connection signal="gui_input" from="." to="." method="_on_UI_gui_input"]

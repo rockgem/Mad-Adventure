@@ -124,6 +124,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/storytimez/custom_resources/ItemBase.gd"
 }, {
+"base": "Label",
+"class": "ItemDisplay",
+"language": "GDScript",
+"path": "res://addons/storytimez/scenes/tiny/ItemDisplay.gd"
+}, {
 "base": "DocItem",
 "class": "MethodDocItem",
 "language": "GDScript",
@@ -133,6 +138,11 @@ _global_script_classes=[ {
 "class": "PropertyDocItem",
 "language": "GDScript",
 "path": "res://addons/silicon.util.custom_docs/doc_item/property_doc_item.gd"
+}, {
+"base": "Reference",
+"class": "Quest",
+"language": "GDScript",
+"path": "res://scripts/custom/Quest.gd"
 }, {
 "base": "DocItem",
 "class": "SignalDocItem",
@@ -173,8 +183,10 @@ _global_script_class_icons={
 "FunctionTask": "",
 "Item": "",
 "ItemBase": "",
+"ItemDisplay": "",
 "MethodDocItem": "",
 "PropertyDocItem": "",
+"Quest": "",
 "SignalDocItem": "",
 "StorageReference": "",
 "StorageTask": ""

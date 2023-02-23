@@ -11,6 +11,7 @@ var portal_towards: String = ''
 var current_location: String = ''
 
 var inv_items_slots: int = 20
+
 var player_data: Dictionary = {
 	'gold': 0,
 	'inv_items': []
