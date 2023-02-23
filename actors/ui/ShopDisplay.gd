@@ -2,7 +2,7 @@ extends Panel
 
 
 
-signal clicked
+signal clicked(item_data)
 
 
 
@@ -17,9 +17,9 @@ func _ready():
 
 func _on_ShopDisplay_gui_input(event):
 	if event is InputEventScreenTouch and !event.pressed:
-		var item = ManagerInventory.get_item_by_name(item)
-		if item is Item:
-			emit_signal("clicked")
+		var i = ManagerInventory.get_item_by_name(item)
+		if i is Item:
+			emit_signal("clicked", i)
 		else:
 			print('not an item or null')
 		

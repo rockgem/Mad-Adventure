@@ -50,9 +50,9 @@ func new_game():
 func load_game():
 	var task: FirestoreTask = collection.get(Firebase.Auth.auth['localid'])
 	var doc: FirestoreDocument = yield(task, "get_document")
+	player_data = doc.doc_fields
 
 
 func _notification(what):
 	if what == NOTIFICATION_WM_QUIT_REQUEST or what == NOTIFICATION_WM_FOCUS_OUT:
 		return
-#		save_game()

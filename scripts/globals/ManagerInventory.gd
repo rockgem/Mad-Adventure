@@ -12,7 +12,15 @@ func _ready():
 
 
 func add_item_to_bag(data: Item):
-	ManagerGame.player_data['inv_items'].append(data.props)
+	var count = 0
+	for dict in ManagerGame.player_data['inv_items']:
+		if dict.empty():
+			ManagerGame.player_data['inv_items'][count] = data.props.duplicate()
+			break
+		
+		count += 1
+	
+	ManagerGame.collection.update(Firebase.Auth.auth['localid'], ManagerGame.player_data)
 
 
 func get_item_by_name(id: String):
@@ -37,8 +45,8 @@ func get_item_by_idx(idx: int) -> Item:
 	return item
 
 
-func generate_item(item_id: String, item_name: String, type: int) -> Item:
-	var item_data = Item.new()
-	item_data.init_item(item_id, item_name, type)
-	
-	return item_data
+#func generate_item(item_id: String, item_name: String, type: int) -> Item:
+#	var item_data = Item.new()
+#	item_data.init_item(item_id, item_name, type)
+#
+#	return item_data
