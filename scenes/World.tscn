@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://resources/cave.tres" type="TileSet" id=1]
 [ext_resource path="res://actors/entities/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/World.gd" type="Script" id=3]
 [ext_resource path="res://actors/objs/Portal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://actors/entities/NPCShops.tscn" type="PackedScene" id=5]
+[ext_resource path="res://actors/ui/Shop.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 3 )
@@ -27,9 +28,7 @@ z_index = -1
 
 [node name="NPCShops" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 284, 43 )
-
-[node name="NPCShops2" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 71, 43 )
+scene = ExtResource( 6 )
 
 [node name="Portals" type="Node2D" parent="."]
 

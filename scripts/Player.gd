@@ -9,8 +9,11 @@ var dir = 1
 
 var objs_nearby = [] # array of area2Ds or bodies
 
+var can_move: bool = true
 
 func _ready():
+	ManagerGame.connect("player_movement_stop", self, 'on_player_movement_stop')
+	
 	ManagerGame.player_global_ref = self
 
 
@@ -18,7 +21,8 @@ func _physics_process(delta):
 	if is_on_floor() == false:
 		vel.y += gravity * delta
 	
-	vel.x = Input.get_action_strength('ui_right') - Input.get_action_strength('ui_left')
+	if can_move:
+		vel.x = Input.get_action_strength('ui_right') - Input.get_action_strength('ui_left')
 	
 	dir = vel.x
 	
@@ -44,6 +48,10 @@ func _physics_process(delta):
 	
 	
 	vel = move_and_slide(Vector2(vel.x * move_speed, vel.y), Vector2.UP)
+
+
+func on_player_movement_stop(b: bool):
+	can_move = !b #this might be fucking confusing
 
 
 func _on_ObjDetection_area_entered(area):

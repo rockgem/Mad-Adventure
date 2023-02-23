@@ -51,3 +51,5 @@ margin_top = 9.0
 margin_right = -8.0
 margin_bottom = -11.0
 custom_styles/panel = SubResource( 1 )
+
+[connection signal="gui_input" from="." to="." method="_on_Shop_gui_input"]

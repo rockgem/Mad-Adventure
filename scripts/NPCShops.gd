@@ -7,10 +7,13 @@ extends Node2D
 ########################################################################
 
 
+export(PackedScene) var scene
+
 # open shops or whatever this npc does
 func interact():
 	if ManagerGame.player_global_ref.objs_nearby.has($ClickArea):
-		pass
+		ManagerGame.emit_signal("player_movement_stop", true)
+		ManagerGame.emit_signal("pop_scene_to_ui", scene)
 
 
 func _on_ClickArea_input_event(viewport, event, shape_idx):

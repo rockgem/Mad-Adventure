@@ -6,6 +6,8 @@ var all_items = {}
 
 func _ready():
 	var f = File.new()
+	f.open("res://resources/data/items.json", f.READ)
+	all_items = parse_json(f.get_as_text())
 	f.close()
 
 
@@ -13,8 +15,12 @@ func add_item_to_bag(data: Item):
 	ManagerGame.player_data['inv_items'].append(data.props)
 
 
-func get_item_by_name(id: String) -> Item:
+func get_item_by_name(id: String):
+	if all_items.has(id) == false:
+		return
+	
 	var item = Item.new()
+	item.props = all_items.get(id)
 	
 	return item
 

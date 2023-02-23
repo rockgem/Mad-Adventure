@@ -2,8 +2,10 @@ extends Node
 
 
 signal npc_clicked
-
+signal player_movement_stop(boolean)
 signal dialog_activated(data)
+signal pop_scene_to_ui(packed_scene)
+signal npc_shop_activated
 
 
 var is_from_portal: bool = false
