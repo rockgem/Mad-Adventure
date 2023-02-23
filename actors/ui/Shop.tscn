@@ -35,10 +35,12 @@ margin_bottom = 32.0
 size_flags_horizontal = 3
 
 [node name="ShopDisplay" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
+item = "sword_1"
 
 [node name="ShopDisplay2" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
 margin_left = 36.0
 margin_right = 68.0
+item = "shield_1"
 
 [node name="Info" type="Panel" parent="Panel"]
 anchor_left = 1.0

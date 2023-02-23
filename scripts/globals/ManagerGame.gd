@@ -13,7 +13,7 @@ var current_location: String = ''
 var inv_items_slots: int = 20
 
 var player_data: Dictionary = {
-	'gold': 0,
+	'gold': 99999,
 	'inv_items': []
 }
 

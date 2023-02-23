@@ -6,7 +6,6 @@ var all_items = {}
 
 func _ready():
 	var f = File.new()
-	
 	f.close()
 
 
