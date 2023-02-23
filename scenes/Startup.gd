@@ -24,14 +24,14 @@ func on_auth_request(result_code: int, result_content):
 func on_signup_succeeded(auth_result):
 	Firebase.Auth.save_auth(auth_result)
 	login_to_game()
-#	ManagerGame.new_game()
+	ManagerGame.new_game()
 
 
 func on_login_succeeded(auth_result):
 	login_to_game()
-#	ManagerGame.load_game()
+	ManagerGame.load_game()
 
 
 func on_token_refresh_succeeded(auth_result):
-#	ManagerGame.load_game()
 	login_to_game()
+	ManagerGame.load_game()
