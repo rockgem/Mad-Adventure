@@ -12,18 +12,26 @@ func _ready():
 	Firebase.Auth.check_auth_file()
 
 
+func login_to_game():
+	get_tree().change_scene("res://scenes/World.tscn")
+
+
 func on_auth_request(result_code: int, result_content):
 	if result_code == ERR_DOES_NOT_EXIST:
 		Firebase.Auth.login_anonymous()
 
 
 func on_signup_succeeded(auth_result):
-	pass
+	Firebase.Auth.save_auth(auth_result)
+	login_to_game()
+#	ManagerGame.new_game()
 
 
 func on_login_succeeded(auth_result):
-	pass
+	login_to_game()
+#	ManagerGame.load_game()
 
 
 func on_token_refresh_succeeded(auth_result):
-	pass
+#	ManagerGame.load_game()
+	login_to_game()

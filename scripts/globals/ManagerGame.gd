@@ -20,15 +20,17 @@ var player_data: Dictionary = {
 
 var player_global_ref = null
 
+onready var collection = Firebase.Firestore.collection('users')
+
 
 func _ready():
 	OS.center_window()
 	
-	var f = File.new()
-	if f.file_exists(SAVE_PATH):
-		load_game()
-	else:
-		new_game()
+#	var f = File.new()
+#	if f.file_exists(SAVE_PATH):
+#		load_game()
+#	else:
+#		new_game()
 
 
 func portal_activate(world_name: String):
@@ -37,24 +39,24 @@ func portal_activate(world_name: String):
 
 
 func save_game():
-	var f = File.new()
-	f.open(SAVE_PATH, f.WRITE)
-	f.store_string(JSON.print(player_data))
-	f.close()
+	var task: FirestoreTask = collection.update(Firebase.Auth.auth['localid'], player_data)
+	var doc: FirestoreDocument = yield(task, "update_document")
 
 
 func new_game():
 	#generate 20 empty inv slots
 	for i in inv_items_slots:
 		player_data['inv_items'].append({})
+	
+	var task: FirestoreTask = collection.add(Firebase.Auth.auth['localid'], player_data)
+	var doc: FirestoreDocument = yield(task, "add_document")
+	
 	save_game()
 
 
 func load_game():
-	var f = File.new()
-	f.open(SAVE_PATH, f.READ)
-	player_data = parse_json(f.get_as_text())
-	f.close()
+	var task: FirestoreTask = collection.get(Firebase.Auth.auth['localid'])
+	var doc: FirestoreDocument = yield(task, "get_document")
 
 
 func _notification(what):

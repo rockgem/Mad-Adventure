@@ -188,9 +188,9 @@ config/icon="res://assets/sprites/player/Chara - BlueIdle00003.png"
 
 [autoload]
 
+Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 ManagerGame="*res://scripts/globals/ManagerGame.gd"
 ManagerInventory="*res://scripts/globals/ManagerInventory.gd"
-Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 
 [display]
 
