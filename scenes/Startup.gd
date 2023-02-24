@@ -13,7 +13,7 @@ func _ready():
 
 
 func login_to_game():
-	get_tree().change_scene("res://scenes/World.tscn")
+	get_tree().change_scene("res://scenes/MainMenu.tscn")
 
 
 func on_auth_request(result_code: int, result_content):
