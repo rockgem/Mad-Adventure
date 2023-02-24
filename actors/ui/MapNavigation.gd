@@ -21,3 +21,11 @@ func _on_Map_gui_input(event):
 			get_node('%Map').rect_position.y = 0.0
 		if get_node('%Map').rect_position.y < -limit_down:
 			get_node('%Map').rect_position.y = -limit_down
+
+
+func _on_MapNavigation_gui_input(event):
+	pass # Replace with function body.
+
+
+func _on_Close_pressed():
+	queue_free()
