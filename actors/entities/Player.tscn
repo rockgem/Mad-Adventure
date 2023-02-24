@@ -198,7 +198,7 @@ region = Rect2( 560, 0, 80, 80 )
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
-"loop": true,
+"loop": false,
 "name": "attack",
 "speed": 12.0
 }, {
@@ -297,11 +297,16 @@ shape = SubResource( 50 )
 [node name="Aim" type="Node2D" parent="."]
 position = Vector2( 0, -25 )
 
-[node name="Area2D" type="Area2D" parent="Aim"]
+[node name="Hitbox" type="Area2D" parent="Aim"]
+unique_name_in_owner = true
 position = Vector2( 35, 0 )
+collision_layer = 2048
+collision_mask = 0
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Aim/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Aim/Hitbox"]
 shape = SubResource( 51 )
+disabled = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 visible = false

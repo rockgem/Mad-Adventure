@@ -270,6 +270,11 @@ ui_up={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [input_devices]
 
@@ -282,6 +287,10 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_3="Portal"
 2d_physics/layer_10="NPCClickArea"
 2d_physics/layer_11="PlayerObjectDetection"
+2d_physics/layer_12="PlayerHitbox"
+2d_physics/layer_13="PlayerHurtbox"
+2d_physics/layer_14="EnemyHitbox"
+2d_physics/layer_15="EnemyHurtbox"
 
 [physics]
 

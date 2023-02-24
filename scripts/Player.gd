@@ -31,14 +31,14 @@ func _physics_process(delta):
 	if dir > 0.5:
 		$AnimatedSprite.flip_h = false
 	
-	
-	if vel != Vector2.ZERO:
-		if is_on_floor():
-			$AnimatedSprite.play("run")
+	if can_move:
+		if vel != Vector2.ZERO:
+			if is_on_floor():
+				$AnimatedSprite.play("run")
+			else:
+				$AnimatedSprite.play("falling")
 		else:
-			$AnimatedSprite.play("falling")
-	else:
-		$AnimatedSprite.play("idle")
+			$AnimatedSprite.play("idle")
 	
 	
 	if Input.is_action_just_pressed('ui_up') and is_on_floor():
@@ -46,8 +46,20 @@ func _physics_process(delta):
 		$AnimatedSprite.play("jump")
 		vel.y = -400.0
 	
-	
-	vel = move_and_slide(Vector2(vel.x * move_speed, vel.y), Vector2.UP)
+	if can_move:
+		vel = move_and_slide(Vector2(vel.x * move_speed, vel.y), Vector2.UP)
+
+
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("attack") and is_on_floor():
+		attack()
+
+
+func attack():
+	can_move = false
+	$AnimatedSprite.play("attack")
+	yield($AnimatedSprite, "animation_finished")
+	can_move = true
 
 
 func on_player_movement_stop(b: bool):
