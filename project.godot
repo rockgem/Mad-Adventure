@@ -206,8 +206,6 @@ ManagerInventory="*res://scripts/globals/ManagerInventory.gd"
 
 [display]
 
-window/size/width=456
-window/size/height=216
 window/size/test_width=1140
 window/size/test_height=540
 window/dpi/allow_hidpi=true

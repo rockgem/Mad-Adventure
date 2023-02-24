@@ -22,14 +22,12 @@ layer = 20
 [node name="Main" type="Panel" parent="."]
 unique_name_in_owner = true
 visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -158.0
-margin_top = -71.0
-margin_right = 158.0
-margin_bottom = 93.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 249.0
+margin_top = 143.0
+margin_right = -249.0
+margin_bottom = -121.0
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 5 )
 
@@ -58,11 +56,14 @@ anchor_bottom = 1.0
 
 [node name="InvList" type="GridContainer" parent="Main/Tab/Bag/CenterContainer"]
 unique_name_in_owner = true
-margin_left = 74.0
-margin_top = 3.0
-margin_right = 210.0
-margin_bottom = 111.0
+margin_left = 179.0
+margin_top = 89.0
+margin_right = 315.0
+margin_bottom = 197.0
 columns = 5
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="BagDisplay" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
 
@@ -186,10 +187,10 @@ margin_bottom = 15.0
 text = "Close"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 7.0
-margin_top = 4.0
-margin_right = 79.0
-margin_bottom = 24.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 281.0
+margin_bottom = 33.0
 
 [node name="Character" type="Button" parent="HBoxContainer"]
 margin_right = 68.0

@@ -4,7 +4,7 @@ extends KinematicBody2D
 var vel = Vector2.ZERO
 var dir
 var move_speed = 80.0
-var gravity = 900.0
+var gravity = 1800.0
 
 var can_move: bool = true
 
@@ -18,7 +18,6 @@ func _physics_process(delta):
 
 
 func hit():
-	print('hit')
 	can_move = false
 	var dir = ManagerGame.player_global_ref.global_position.direction_to(global_position)
 	
