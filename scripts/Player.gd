@@ -28,8 +28,10 @@ func _physics_process(delta):
 	
 	if dir < -0.5:
 		$AnimatedSprite.flip_h = true
+		$Aim.rotation_degrees = 180.0
 	if dir > 0.5:
 		$AnimatedSprite.flip_h = false
+		$Aim.rotation_degrees = 0.0
 	
 	if can_move:
 		if vel != Vector2.ZERO:
@@ -57,6 +59,10 @@ func _unhandled_input(event):
 
 func attack():
 	can_move = false
+	
+	for hurtbox in get_node('%Hitbox').get_overlapping_areas():
+		hurtbox.get_parent().hit()
+	
 	$AnimatedSprite.play("attack")
 	yield($AnimatedSprite, "animation_finished")
 	can_move = true
