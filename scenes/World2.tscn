@@ -31,4 +31,4 @@ position = Vector2( 290, 111 )
 [node name="Portals" type="Node2D" parent="."]
 
 [node name="Portal" parent="Portals" instance=ExtResource( 4 )]
-position = Vector2( 506, 55 )
+position = Vector2( 506, -19 )

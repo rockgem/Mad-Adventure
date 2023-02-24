@@ -240,7 +240,6 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-modulate = Color( 1, 1, 1, 0.239216 )
 position = Vector2( 3, -73 )
 shape = SubResource( 1 )
 
