@@ -1,12 +1,16 @@
 {
     "sword_1": {
+        "id": "sword_1",
         "name": "Basic Sword",
         "type": 0,
-        "price": 10
+        "price": 10,
+        "stack": 1
     },
     "shield_1": {
+        "id": "shield_1",
         "name": "Basic Shield",
         "type": 0,
-        "price": 16
+        "price": 16,
+        "stack": 1
     }
 }

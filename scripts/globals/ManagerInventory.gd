@@ -17,6 +17,10 @@ func add_item_to_bag(data: Item):
 		if dict.empty():
 			ManagerGame.player_data['inv_items'][count] = data.props.duplicate()
 			break
+		elif dict['id'] == data['props']['id']:
+			dict['stack'] += 1
+#			ManagerGame.player_data['inv_items'][count].get('stack')
+			break
 		
 		count += 1
 	

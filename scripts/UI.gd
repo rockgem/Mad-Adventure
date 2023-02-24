@@ -31,3 +31,8 @@ func _on_UI_gui_input(event):
 
 func _on_Character_pressed():
 	get_node('%Main').show()
+
+
+func _on_Main_visibility_changed():
+	if $Main.visible:
+		$Main/Tab/Bag.refresh_list()
