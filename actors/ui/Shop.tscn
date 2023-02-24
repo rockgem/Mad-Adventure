@@ -22,11 +22,29 @@ margin_top = 34.0
 margin_right = -69.0
 margin_bottom = -19.0
 
+[node name="Gold" type="HBoxContainer" parent="Panel"]
+unique_name_in_owner = true
+margin_left = 9.0
+margin_top = 4.0
+margin_right = 161.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="Panel/Gold"]
+margin_right = 28.0
+margin_bottom = 15.0
+text = "Gold:"
+
+[node name="Value" type="Label" parent="Panel/Gold"]
+margin_left = 32.0
+margin_right = 67.0
+margin_bottom = 15.0
+text = "99999"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
 anchor_right = 0.544
 anchor_bottom = 1.0
 margin_left = 9.0
-margin_top = 8.0
+margin_top = 24.0
 margin_right = 0.00799561
 margin_bottom = -7.0
 scroll_horizontal_enabled = false

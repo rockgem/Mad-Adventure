@@ -32,3 +32,5 @@ margin_left = 260.0
 margin_right = 290.0
 margin_bottom = 21.0
 text = "Exit"
+
+[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_Play_pressed"]

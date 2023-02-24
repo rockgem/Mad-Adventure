@@ -11,8 +11,3 @@ enum ITEM_TYPE{
 
 var props: Dictionary = {}
 
-
-func init_item(id: String, name: String, type: int):
-	self.props['id'] = id
-	self.props['name'] = name
-	self.props['type'] = type
