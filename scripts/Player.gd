@@ -59,6 +59,7 @@ func _unhandled_input(event):
 
 
 func attack():
+	print('att')
 	can_move = false
 	
 	for hurtbox in get_node('%Hitbox').get_overlapping_areas():

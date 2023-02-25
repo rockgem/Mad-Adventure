@@ -284,6 +284,7 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Portal"
 2d_physics/layer_4="BoatArea"
+2d_physics/layer_5="EnemyBody"
 2d_physics/layer_10="NPCClickArea"
 2d_physics/layer_11="PlayerObjectDetection"
 2d_physics/layer_12="PlayerHitbox"

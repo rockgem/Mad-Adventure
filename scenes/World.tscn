@@ -74,10 +74,10 @@ collision_mask = 2
 shape = SubResource( 1 )
 
 [node name="Boat" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( -238, 463 )
+position = Vector2( -856, 502 )
 
 [node name="Portals" type="Node2D" parent="."]
 
 [node name="Portal" parent="Portals" instance=ExtResource( 4 )]
-position = Vector2( -518, 438 )
+position = Vector2( -801, 114 )
 towards = "World2"
