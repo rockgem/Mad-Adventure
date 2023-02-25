@@ -59,7 +59,6 @@ func _unhandled_input(event):
 
 
 func attack():
-	print('att')
 	can_move = false
 	
 	for hurtbox in get_node('%Hitbox').get_overlapping_areas():
@@ -76,9 +75,7 @@ func on_player_movement_stop(b: bool):
 
 func _on_ObjDetection_area_entered(area):
 	objs_nearby.append(area)
-	print_debug(objs_nearby)
 
 
 func _on_ObjDetection_area_exited(area):
 	objs_nearby.erase(area)
-	print_debug(objs_nearby)
