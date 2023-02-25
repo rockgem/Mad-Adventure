@@ -18,3 +18,43 @@ margin_right = 68.0
 margin_bottom = -7.0
 text = "Loading...."
 align = 1
+
+[node name="SignupControl" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="SignupControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 284.0
+margin_top = 135.0
+margin_right = -284.0
+margin_bottom = -135.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SignupControl/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 27.0
+margin_top = 33.0
+margin_right = -27.0
+margin_bottom = -33.0
+
+[node name="Label" type="Label" parent="SignupControl/Panel/VBoxContainer"]
+margin_right = 402.0
+margin_bottom = 15.0
+text = "Signup:"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SignupControl/Panel/VBoxContainer"]
+margin_top = 19.0
+margin_right = 402.0
+margin_bottom = 40.0
+
+[node name="Anon" type="Button" parent="SignupControl/Panel/VBoxContainer/HBoxContainer"]
+margin_right = 402.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+text = "Anonymous"
+
+[connection signal="pressed" from="SignupControl/Panel/VBoxContainer/HBoxContainer/Anon" to="." method="_on_Anon_pressed"]

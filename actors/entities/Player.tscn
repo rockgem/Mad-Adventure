@@ -211,6 +211,7 @@ radius = 102.005
 radius = 31.0
 
 [node name="Player" type="KinematicBody2D"]
+z_index = 2
 collision_layer = 2
 moving_platform_apply_velocity_on_leave = 2
 script = ExtResource( 2 )

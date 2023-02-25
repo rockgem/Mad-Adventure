@@ -167,16 +167,6 @@ margin_top = 84.0
 margin_right = 136.0
 margin_bottom = 108.0
 
-[node name="Stats" type="Tabs" parent="Main/Tab"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 14.0
-margin_top = 41.0
-margin_right = -17.0
-margin_bottom = -14.0
-tab_align = 0
-
 [node name="Close" type="Button" parent="Main"]
 anchor_left = 1.0
 anchor_right = 1.0

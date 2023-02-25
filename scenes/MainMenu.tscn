@@ -16,21 +16,30 @@ margin_bottom = -8.0
 alignment = 1
 
 [node name="Play" type="Button" parent="HBoxContainer"]
-margin_left = 165.0
-margin_right = 200.0
+margin_left = 449.0
+margin_right = 484.0
 margin_bottom = 21.0
 text = "Play"
 
 [node name="Options" type="Button" parent="HBoxContainer"]
-margin_left = 204.0
-margin_right = 256.0
+margin_left = 488.0
+margin_right = 540.0
 margin_bottom = 21.0
 text = "Options"
 
 [node name="Exit" type="Button" parent="HBoxContainer"]
-margin_left = 260.0
-margin_right = 290.0
+margin_left = 544.0
+margin_right = 574.0
 margin_bottom = 21.0
 text = "Exit"
+
+[node name="UID" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 23.0
+margin_top = -29.0
+margin_right = 328.0
+margin_bottom = -14.0
+text = "useruid"
 
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_Play_pressed"]
