@@ -53,3 +53,14 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 0, -38 )
 shape = SubResource( 4 )
+
+[node name="HPBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+margin_left = -63.0
+margin_top = -107.0
+margin_right = 63.0
+margin_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 40.0
+percent_visible = false

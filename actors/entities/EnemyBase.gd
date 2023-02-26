@@ -10,6 +10,10 @@ var gravity = 1800.0
 
 var can_move: bool = true
 
+func _ready():
+	get_node('%HPBar').max_value = hp
+	get_node('%HPBar').value = hp
+
 
 func _physics_process(delta):
 	if is_on_floor() == false:
@@ -20,6 +24,10 @@ func _physics_process(delta):
 
 
 func hit():
+	hp -= 1
+	
+	get_node('%HPBar').value = hp
+	
 	can_move = false
 	var dir = ManagerGame.player_global_ref.global_position.direction_to(global_position)
 	
