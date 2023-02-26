@@ -56,116 +56,125 @@ anchor_bottom = 1.0
 
 [node name="InvList" type="GridContainer" parent="Main/Tab/Bag/CenterContainer"]
 unique_name_in_owner = true
-margin_left = 179.0
-margin_top = 89.0
-margin_right = 315.0
-margin_bottom = 197.0
+margin_left = 79.0
+margin_top = 9.0
+margin_right = 415.0
+margin_bottom = 277.0
 columns = 5
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="BagDisplay" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
+margin_right = 64.0
+margin_bottom = 64.0
 
 [node name="BagDisplay2" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 28.0
-margin_right = 52.0
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
 
 [node name="BagDisplay3" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 56.0
-margin_right = 80.0
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0
 
 [node name="BagDisplay4" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 84.0
-margin_right = 108.0
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 64.0
 
 [node name="BagDisplay5" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 112.0
-margin_right = 136.0
+margin_left = 272.0
+margin_right = 336.0
+margin_bottom = 64.0
 
 [node name="BagDisplay6" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_top = 28.0
-margin_bottom = 52.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 132.0
 
 [node name="BagDisplay7" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 28.0
-margin_top = 28.0
-margin_right = 52.0
-margin_bottom = 52.0
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 132.0
 
 [node name="BagDisplay8" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 56.0
-margin_top = 28.0
-margin_right = 80.0
-margin_bottom = 52.0
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 132.0
 
 [node name="BagDisplay9" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 84.0
-margin_top = 28.0
-margin_right = 108.0
-margin_bottom = 52.0
+margin_left = 204.0
+margin_top = 68.0
+margin_right = 268.0
+margin_bottom = 132.0
 
 [node name="BagDisplay10" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 112.0
-margin_top = 28.0
-margin_right = 136.0
-margin_bottom = 52.0
+margin_left = 272.0
+margin_top = 68.0
+margin_right = 336.0
+margin_bottom = 132.0
 
 [node name="BagDisplay11" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_top = 56.0
-margin_bottom = 80.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
 
 [node name="BagDisplay12" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 28.0
-margin_top = 56.0
-margin_right = 52.0
-margin_bottom = 80.0
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 200.0
 
 [node name="BagDisplay13" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 56.0
-margin_top = 56.0
-margin_right = 80.0
-margin_bottom = 80.0
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 200.0
 
 [node name="BagDisplay14" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 84.0
-margin_top = 56.0
-margin_right = 108.0
-margin_bottom = 80.0
+margin_left = 204.0
+margin_top = 136.0
+margin_right = 268.0
+margin_bottom = 200.0
 
 [node name="BagDisplay15" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 112.0
-margin_top = 56.0
-margin_right = 136.0
-margin_bottom = 80.0
+margin_left = 272.0
+margin_top = 136.0
+margin_right = 336.0
+margin_bottom = 200.0
 
 [node name="BagDisplay16" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_top = 84.0
-margin_bottom = 108.0
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 268.0
 
 [node name="BagDisplay17" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 28.0
-margin_top = 84.0
-margin_right = 52.0
-margin_bottom = 108.0
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 268.0
 
 [node name="BagDisplay18" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 56.0
-margin_top = 84.0
-margin_right = 80.0
-margin_bottom = 108.0
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 268.0
 
 [node name="BagDisplay19" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 84.0
-margin_top = 84.0
-margin_right = 108.0
-margin_bottom = 108.0
+margin_left = 204.0
+margin_top = 204.0
+margin_right = 268.0
+margin_bottom = 268.0
 
 [node name="BagDisplay20" parent="Main/Tab/Bag/CenterContainer/InvList" instance=ExtResource( 6 )]
-margin_left = 112.0
-margin_top = 84.0
-margin_right = 136.0
-margin_bottom = 108.0
+margin_left = 272.0
+margin_top = 204.0
+margin_right = 336.0
+margin_bottom = 268.0
 
 [node name="Close" type="Button" parent="Main"]
 anchor_left = 1.0
