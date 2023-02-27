@@ -14,9 +14,18 @@ var current_location: String = ''
 
 var inv_items_slots: int = 20
 
+
+# the player's initial stats and data
 var player_data: Dictionary = {
 	'gold': 99999,
-	'inv_items': []
+	'inv_items': [],
+	'stats': {
+		'str': 10,
+		'speed': 12,
+		'hp': 15,
+		'hp_max': 15,
+		'att': 5,
+	}
 }
 
 var player_global_ref = null
@@ -35,7 +44,7 @@ func portal_activate(world_name: String):
 
 func save_game():
 	var task: FirestoreTask = collection.update(Firebase.Auth.auth['localid'], player_data)
-	var doc: FirestoreDocument = yield(task, "update_document")
+#	var doc: FirestoreDocument = yield(task, "update_document")
 
 
 func new_game():
@@ -44,7 +53,7 @@ func new_game():
 		player_data['inv_items'].append({})
 	
 	var task: FirestoreTask = collection.add(Firebase.Auth.auth['localid'], player_data)
-	var doc: FirestoreDocument = yield(task, "add_document")
+#	var doc: FirestoreDocument = yield(task, "add_document")
 
 
 func load_game():
