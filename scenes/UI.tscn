@@ -21,7 +21,6 @@ layer = 20
 
 [node name="Main" type="Panel" parent="."]
 unique_name_in_owner = true
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 249.0
@@ -175,6 +174,19 @@ margin_left = 272.0
 margin_top = 204.0
 margin_right = 336.0
 margin_bottom = 268.0
+
+[node name="Stats" type="Tabs" parent="Main/Tab"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 36.0
+margin_right = -17.0
+margin_bottom = -14.0
+
+[node name="HBox" type="HBoxContainer" parent="Main/Tab/Stats"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="Close" type="Button" parent="Main"]
 anchor_left = 1.0
