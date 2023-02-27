@@ -11,6 +11,12 @@ extends Node2D
 
 
 func _ready():
+	$YSort/Player/Camera2D.limit_top = $CamLimits/TL.global_position.y
+	$YSort/Player/Camera2D.limit_left = $CamLimits/TL.global_position.x
+	$YSort/Player/Camera2D.limit_right = $CamLimits/BR.global_position.x
+	$YSort/Player/Camera2D.limit_bottom = $CamLimits/BR.global_position.y
+	
+	
 	if ManagerGame.is_from_portal:
 		
 		for portal in $Portals.get_children():

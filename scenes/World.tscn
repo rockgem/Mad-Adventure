@@ -43,9 +43,6 @@ position = Vector2( 605, 389 )
 position = Vector2( 1083, 484 )
 scene = ExtResource( 6 )
 
-[node name="EnemyBase" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( -121, 437 )
-
 [node name="EnemyBase2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 1473, 373 )
 
@@ -80,3 +77,11 @@ position = Vector2( -856, 502 )
 [node name="Portal" parent="Portals" instance=ExtResource( 4 )]
 position = Vector2( -801, 114 )
 towards = "World2"
+
+[node name="CamLimits" type="Node2D" parent="."]
+
+[node name="TL" type="Position2D" parent="CamLimits"]
+position = Vector2( -1121, -644 )
+
+[node name="BR" type="Position2D" parent="CamLimits"]
+position = Vector2( 2358, 604 )

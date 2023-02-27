@@ -1,15 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://resources/cave.tres" type="TileSet" id=1]
 [ext_resource path="res://actors/entities/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/World.gd" type="Script" id=3]
 [ext_resource path="res://actors/objs/Portal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://actors/entities/NPCBase.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/tilemap/desert2.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2066, 45 )
 
 [node name="World2" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="ScriptHolder" type="Node" parent="."]
+
+[node name="Desert2" type="Sprite" parent="."]
+position = Vector2( 476, 169 )
+texture = ExtResource( 6 )
 
 [node name="YSort" type="YSort" parent="."]
 z_index = 99
@@ -19,7 +27,6 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 collision_mask = 2
 format = 1
-tile_data = PoolIntArray( 196605, 0, 0, 196606, 0, 1, 196607, 0, 1, 131072, 0, 1, 131073, 0, 2, 131083, 0, 0, 131084, 0, 1, 131085, 0, 1, 131086, 0, 1, 131087, 0, 1, 131088, 0, 2, 262141, 0, 131072, 262142, 0, 65537, 262143, 0, 65537, 196608, 0, 65537, 196609, 0, 65537, 196610, 0, 1, 196611, 0, 1, 196612, 0, 1, 196613, 0, 1, 196614, 0, 1, 196615, 0, 1, 196616, 0, 1, 196617, 0, 1, 196618, 0, 1, 196619, 0, 65537, 196620, 0, 65537, 196621, 0, 65537, 196622, 0, 65537, 196623, 0, 65537, 196624, 0, 65538, 327668, 0, 0, 327669, 0, 1, 327670, 0, 1, 327671, 0, 1, 327672, 0, 1, 327673, 0, 1, 327674, 0, 1, 327675, 0, 1, 327676, 0, 2, 327678, 0, 131072, 327679, 0, 131073, 262144, 0, 65537, 262145, 0, 65537, 262146, 0, 65537, 262147, 0, 65537, 262148, 0, 65537, 262149, 0, 65537, 262150, 0, 65537, 262151, 0, 65537, 262152, 0, 65537, 262153, 0, 65537, 262154, 0, 65537, 262155, 0, 65537, 262156, 0, 65537, 262157, 0, 65537, 262158, 0, 65537, 262159, 0, 65537, 262160, 0, 65538, 393204, 0, 65536, 393205, 0, 65537, 393206, 0, 65537, 393207, 0, 65537, 393208, 0, 65537, 393209, 0, 65537, 393210, 0, 65537, 393211, 0, 65537, 393212, 0, 65537, 393213, 0, 2, 327680, 0, 131072, 327681, 0, 131073, 327682, 0, 131073, 327683, 0, 131073, 327684, 0, 131073, 327685, 0, 131073, 327686, 0, 131073, 327687, 0, 131073, 327688, 0, 131073, 327689, 0, 131073, 327690, 0, 131073, 327691, 0, 131073, 327692, 0, 131073, 327693, 0, 131073, 327694, 0, 131073, 327695, 0, 131073, 327696, 0, 131074, 458740, 0, 65536, 458741, 0, 65537, 458742, 0, 65537, 458743, 0, 65537, 458744, 0, 65537, 458745, 0, 65537, 458746, 0, 65537, 458747, 0, 65537, 458748, 0, 65537, 458749, 0, 65538, 524276, 0, 65536, 524277, 0, 65537, 524278, 0, 65537, 524279, 0, 65537, 524280, 0, 65537, 524281, 0, 65537, 524282, 0, 65537, 524283, 0, 65537, 524284, 0, 65537, 524285, 0, 65537, 524286, 0, 1, 524287, 0, 1, 458752, 0, 1, 458753, 0, 2, 589812, 0, 131072, 589813, 0, 131073, 589814, 0, 131073, 589815, 0, 131073, 589816, 0, 131073, 589817, 0, 131073, 589818, 0, 65537, 589819, 0, 65537, 589820, 0, 65537, 589821, 0, 65537, 589822, 0, 65537, 589823, 0, 65537, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 1, 524291, 0, 1, 524292, 0, 1, 524293, 0, 2, 655354, 0, 131072, 655355, 0, 131073, 655356, 0, 65537, 655357, 0, 65537, 655358, 0, 65537, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 1, 589831, 0, 2, 720892, 0, 131072, 720893, 0, 131073, 720894, 0, 131073, 720895, 0, 131073, 655360, 0, 131073, 655361, 0, 131073, 655362, 0, 131073, 655363, 0, 131073, 655364, 0, 131073, 655365, 0, 131073, 655366, 0, 131073, 655367, 0, 131074 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 155, 87 )
@@ -28,7 +35,38 @@ z_index = -1
 [node name="NPCBase" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 290, 111 )
 
+[node name="Floor" type="StaticBody2D" parent="YSort"]
+position = Vector2( 670, 555 )
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Floor"]
+shape = SubResource( 1 )
+
+[node name="Floor2" type="StaticBody2D" parent="YSort"]
+position = Vector2( 1425, 583 )
+rotation = 1.5708
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Floor2"]
+shape = SubResource( 1 )
+
+[node name="Floor3" type="StaticBody2D" parent="YSort"]
+position = Vector2( -467, 583 )
+rotation = 1.5708
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Floor3"]
+shape = SubResource( 1 )
+
 [node name="Portals" type="Node2D" parent="."]
 
 [node name="Portal" parent="Portals" instance=ExtResource( 4 )]
-position = Vector2( 506, -19 )
+position = Vector2( 1552, 228 )
+
+[node name="CamLimits" type="Node2D" parent="."]
+
+[node name="TL" type="Position2D" parent="CamLimits"]
+position = Vector2( -483, -366 )
+
+[node name="BR" type="Position2D" parent="CamLimits"]
+position = Vector2( 1431, 697 )
