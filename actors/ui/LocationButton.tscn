@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://actors/ui/LocationButton.gd" type="Script" id=1]
+
+[node name="LocationButton" type="Button"]
+margin_left = 792.0
+margin_top = 430.0
+margin_right = 835.0
+margin_bottom = 451.0
+text = "World"
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="." to="." method="_on_LocationButton_pressed"]

@@ -4,8 +4,12 @@ onready var limit_right = $Panel/Panel/Map.rect_size.x - $Panel/Panel.rect_size.
 onready var limit_down =  $Panel/Panel/Map.rect_size.y - $Panel/Panel.rect_size.y
 
 func _ready():
-	print(-limit_right)
-	print(-limit_down)
+	for child in get_node('%Map').get_children():
+		child.connect('clicked', self, 'on_location_clicked')
+
+
+func on_location_clicked(towards: String):
+	get_tree().change_scene("res://scenes/%s.tscn" % towards)
 
 
 func _on_Map_gui_input(event):
