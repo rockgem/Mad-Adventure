@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/UI.gd" type="Script" id=1]
 [ext_resource path="res://resources/styles/panel_1.tres" type="StyleBox" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scripts/Main.gd" type="Script" id=5]
 [ext_resource path="res://actors/ui/BagDisplay.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Bag.gd" type="Script" id=7]
+[ext_resource path="res://actors/ui/StatBox.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -40,6 +41,7 @@ custom_styles/panel = ExtResource( 2 )
 tab_align = 0
 
 [node name="Bag" type="Tabs" parent="Main/Tab"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 14.0
@@ -176,7 +178,6 @@ margin_right = 336.0
 margin_bottom = 268.0
 
 [node name="Stats" type="Tabs" parent="Main/Tab"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 14.0
@@ -187,6 +188,32 @@ margin_bottom = -14.0
 [node name="HBox" type="HBoxContainer" parent="Main/Tab/Stats"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Main/Tab/Stats/HBox"]
+margin_right = 60.0
+margin_bottom = 286.0
+
+[node name="StatBox" parent="Main/Tab/Stats/HBox/HBoxContainer" instance=ExtResource( 8 )]
+margin_right = 60.0
+stat_name = "Strength"
+
+[node name="StatBox2" parent="Main/Tab/Stats/HBox/HBoxContainer" instance=ExtResource( 8 )]
+margin_top = 19.0
+margin_right = 60.0
+margin_bottom = 34.0
+stat_name = "Speed"
+
+[node name="StatBox3" parent="Main/Tab/Stats/HBox/HBoxContainer" instance=ExtResource( 8 )]
+margin_top = 38.0
+margin_right = 60.0
+margin_bottom = 53.0
+stat_name = "Max HP"
+
+[node name="StatBox4" parent="Main/Tab/Stats/HBox/HBoxContainer" instance=ExtResource( 8 )]
+margin_top = 57.0
+margin_right = 60.0
+margin_bottom = 72.0
+stat_name = "Attack"
 
 [node name="Close" type="Button" parent="Main"]
 anchor_left = 1.0
