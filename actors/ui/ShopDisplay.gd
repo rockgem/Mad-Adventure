@@ -6,6 +6,8 @@ signal clicked(item_data)
 
 
 
+# this should have an item id so it can display the item here
+# see _ready func
 export(String) var item
 
 var item_data

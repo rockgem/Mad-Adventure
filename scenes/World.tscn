@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://resources/cave.tres" type="TileSet" id=1]
 [ext_resource path="res://actors/entities/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://actors/entities/EnemyBase.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/tilemap/66A54E1E-DB60-40A4-BC29-073715B5F5F8.jpeg" type="Texture" id=8]
 [ext_resource path="res://actors/objs/Boat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://actors/entities/NPCBase.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2066, 45 )
@@ -71,6 +72,9 @@ shape = SubResource( 1 )
 
 [node name="Boat" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -856, 502 )
+
+[node name="NPCBase" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 974, 537 )
 
 [node name="Portals" type="Node2D" parent="."]
 
