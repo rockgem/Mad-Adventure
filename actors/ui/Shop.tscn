@@ -64,7 +64,8 @@ scroll_horizontal_enabled = false
 
 [node name="List" type="HFlowContainer" parent="Panel/ScrollContainer"]
 unique_name_in_owner = true
-margin_right = 64.0
+margin_right = 310.88
+margin_bottom = 64.0
 size_flags_horizontal = 3
 
 [node name="ShopDisplay" parent="Panel/ScrollContainer/List" instance=ExtResource( 2 )]
