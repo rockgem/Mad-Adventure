@@ -10,12 +10,10 @@ stat_name = ""
 value = 0
 
 [node name="Label" type="Label" parent="."]
-margin_right = 49.0
 margin_bottom = 15.0
-text = "Strength"
 
 [node name="Value" type="Label" parent="."]
-margin_left = 53.0
-margin_right = 67.0
+margin_left = 4.0
+margin_right = 11.0
 margin_bottom = 15.0
-text = "99"
+text = "0"

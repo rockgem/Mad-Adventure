@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/UI.gd" type="Script" id=1]
-[ext_resource path="res://resources/styles/panel_1.tres" type="StyleBox" id=2]
+[ext_resource path="res://resources/styles/panel_brown.tres" type="StyleBox" id=2]
 [ext_resource path="res://resources/styles/small_panel_blue.tres" type="StyleBox" id=3]
 [ext_resource path="res://resources/styles/small_panel_brown.tres" type="StyleBox" id=4]
 [ext_resource path="res://scripts/Main.gd" type="Script" id=5]
 [ext_resource path="res://actors/ui/BagDisplay.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Bag.gd" type="Script" id=7]
 [ext_resource path="res://actors/ui/StatBox.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Stats.gd" type="Script" id=9]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -22,6 +23,7 @@ layer = 20
 
 [node name="Main" type="Panel" parent="."]
 unique_name_in_owner = true
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 249.0
@@ -41,7 +43,6 @@ custom_styles/panel = ExtResource( 2 )
 tab_align = 0
 
 [node name="Bag" type="Tabs" parent="Main/Tab"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 14.0
@@ -178,12 +179,14 @@ margin_right = 336.0
 margin_bottom = 268.0
 
 [node name="Stats" type="Tabs" parent="Main/Tab"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 14.0
 margin_top = 36.0
 margin_right = -17.0
 margin_bottom = -14.0
+script = ExtResource( 9 )
 
 [node name="HBox" type="HBoxContainer" parent="Main/Tab/Stats"]
 anchor_right = 1.0

@@ -40,6 +40,19 @@ margin_right = 67.0
 margin_bottom = 15.0
 text = "99999"
 
+[node name="Floater" type="Label" parent="Panel/Gold/Value"]
+unique_name_in_owner = true
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -7.5
+margin_right = 47.0
+margin_bottom = 7.5
+text = "-999"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
 anchor_right = 0.544
 anchor_bottom = 1.0
@@ -87,7 +100,7 @@ margin_right = -5.0
 margin_bottom = -5.0
 
 [node name="Name" type="Label" parent="Panel/Info/VBoxContainer"]
-margin_right = 113.0
+margin_right = 161.0
 margin_bottom = 15.0
 text = "Item name"
 
@@ -100,13 +113,13 @@ text = "type"
 
 [node name="Price" type="Label" parent="Panel/Info/VBoxContainer"]
 margin_top = 19.0
-margin_right = 113.0
+margin_right = 161.0
 margin_bottom = 34.0
 text = "price 50"
 
 [node name="Buy" type="Button" parent="Panel/Info/VBoxContainer"]
 margin_top = 38.0
-margin_right = 113.0
+margin_right = 161.0
 margin_bottom = 53.0
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 2 )
