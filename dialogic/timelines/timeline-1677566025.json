@@ -5,6 +5,50 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Hello"
+		},
+		{
+			"character": "character-1677566062.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I am good"
+		},
+		{
+			"character": "character-1677566062.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "checkout dialogic"
+		},
+		{
+			"choice": "Ok",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Sure",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1677566062.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Dialogic has excellent documention, you dont even need to search it up online! :D"
+		},
+		{
+			"character": "character-1677566062.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "please tell me if you wanted me to help you out with the story. and branching or smt.\n-weirdbug1"
 		}
 	],
 	"metadata": {

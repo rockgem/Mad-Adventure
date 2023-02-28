@@ -2,16 +2,27 @@ extends Control
 
 
 
+
+
+
 func _ready():
 	ManagerGame.connect("dialog_activated", self, 'on_dialog_activated')
 	ManagerGame.connect("npc_shop_activated", self, 'on_npc_shop_activated')
 	ManagerGame.connect("pop_scene_to_ui", self, 'on_pop_scene_to_ui')
 
 
-func on_dialog_activated(data):
-	var d = load("res://actors/ui/Dialog.tscn").instance()
-	$Popup.add_child(d)
-	d.pre_load_dialog(data)
+func on_dialog_activated(timeline: String):
+	var dialog = Dialogic.start(timeline)
+	dialog.connect('timeline_start', self, 'on_timeline_start')
+	dialog.connect('timeline_end', self, 'on_timeline_end')
+	add_child(dialog)
+
+
+func on_timeline_start(t_name):
+	ManagerGame.emit_signal("player_movement_stop", true)
+
+func on_timeline_end(t_name):
+	ManagerGame.emit_signal("player_movement_stop", false)
 
 
 func on_npc_shop_activated():

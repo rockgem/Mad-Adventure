@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/sprites/mobs/Idle-Sheet-White.png" type="Texture" id=1]
 [ext_resource path="res://scripts/NPCBase.gd" type="Script" id=2]
-[ext_resource path="res://scripts/custom/d.tres" type="Resource" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle"
@@ -28,7 +27,7 @@ radius = 56.0
 [node name="NPCBase" type="Node2D"]
 z_index = -1
 script = ExtResource( 2 )
-dialog_data = ExtResource( 3 )
+timeline = "boar_dialog"
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -49 )
