@@ -44,7 +44,7 @@ func portal_activate(world_name: String):
 
 func save_game():
 	var task: FirestoreTask = collection.update(Firebase.Auth.auth['localid'], player_data)
-#	var doc: FirestoreDocument = yield(task, "update_document")
+	var doc: FirestoreDocument = yield(task, "update_document")
 
 
 func new_game():
@@ -53,7 +53,7 @@ func new_game():
 		player_data['inv_items'].append({})
 	
 	var task: FirestoreTask = collection.add(Firebase.Auth.auth['localid'], player_data)
-#	var doc: FirestoreDocument = yield(task, "add_document")
+	var doc: FirestoreDocument = yield(task, "add_document")
 
 
 func load_game():
