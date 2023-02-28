@@ -235,7 +235,7 @@ layer = 10
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, -180 )
+position = Vector2( 0, -181 )
 current = true
 smoothing_enabled = true
 smoothing_speed = 10.0

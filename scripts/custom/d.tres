@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource( 1 )
+from = "Daemon"
 props = [ "Hello", "I am a dialog", "Please check the docs hehe" ]

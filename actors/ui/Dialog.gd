@@ -9,7 +9,9 @@ var data: DialogData
 
 func pre_load_dialog(data: DialogData):
 	self.data = data
+	
 	get_node('%Text').percent_visible = 0.0
+	get_node('%Name').text = data.from
 	$Timer.start()
 	
 	idx = 0
