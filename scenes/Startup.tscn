@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Startup.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
 
 [node name="Startup" type="Control"]
 anchor_right = 1.0
@@ -52,9 +54,69 @@ margin_right = 402.0
 margin_bottom = 40.0
 
 [node name="Anon" type="Button" parent="SignupControl/Panel/VBoxContainer/HBoxContainer"]
-margin_right = 402.0
+margin_right = 199.0
 margin_bottom = 21.0
 size_flags_horizontal = 3
 text = "Anonymous"
 
+[node name="Email" type="Button" parent="SignupControl/Panel/VBoxContainer/HBoxContainer"]
+margin_left = 203.0
+margin_right = 402.0
+margin_bottom = 21.0
+size_flags_horizontal = 3
+text = "E-mail"
+
+[node name="EmailSignupPanel" type="Panel" parent="SignupControl/Panel/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+margin_top = 44.0
+margin_right = 402.0
+margin_bottom = 264.0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SignupControl/Panel/VBoxContainer/EmailSignupPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = 12.0
+margin_right = -17.0
+margin_bottom = -12.0
+
+[node name="EmailField" type="LineEdit" parent="SignupControl/Panel/VBoxContainer/EmailSignupPanel/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 368.0
+margin_bottom = 25.0
+placeholder_text = "Email"
+
+[node name="PassField" type="LineEdit" parent="SignupControl/Panel/VBoxContainer/EmailSignupPanel/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 29.0
+margin_right = 368.0
+margin_bottom = 54.0
+secret = true
+placeholder_text = "Password"
+
+[node name="SignupEmail" type="Button" parent="SignupControl/Panel/VBoxContainer/EmailSignupPanel/VBoxContainer"]
+margin_top = 58.0
+margin_right = 368.0
+margin_bottom = 79.0
+text = "Signup"
+
+[node name="Cancel" type="Button" parent="SignupControl/Panel/VBoxContainer/EmailSignupPanel/VBoxContainer"]
+margin_top = 83.0
+margin_right = 368.0
+margin_bottom = 104.0
+text = "Cancel"
+
+[node name="Error" type="Label" parent="SignupControl/Panel/VBoxContainer/EmailSignupPanel/VBoxContainer"]
+visible = false
+margin_top = 108.0
+margin_right = 368.0
+margin_bottom = 123.0
+text = "sdfsdfdsf"
+
 [connection signal="pressed" from="SignupControl/Panel/VBoxContainer/HBoxContainer/Anon" to="." method="_on_Anon_pressed"]
+[connection signal="pressed" from="SignupControl/Panel/VBoxContainer/HBoxContainer/Email" to="." method="_on_Email_pressed"]
+[connection signal="pressed" from="SignupControl/Panel/VBoxContainer/EmailSignupPanel/VBoxContainer/SignupEmail" to="." method="_on_SignupEmail_pressed"]
+[connection signal="pressed" from="SignupControl/Panel/VBoxContainer/EmailSignupPanel/VBoxContainer/Cancel" to="." method="_on_Cancel_pressed"]
